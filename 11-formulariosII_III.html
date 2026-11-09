@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios II y III</title>
+
+</head>
+<body>
+    
+    <p>Volver al <a href="index.html">Índice</a></p>
+    <h1>Tipos de Inputs</h1>
+    <form action="procesa.php" method="get">
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <p>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellidos" required autofocus>
+            </p>
+            <p>
+                <label for="ciudad">Población: </label>
+                <input type="text" name="ciudad" id="ciudad" maxlength="100" value="Alcázar de San Juan">
+            </p>
+            <p>
+                <label for="pais">País: </label>
+                <input type="text" name="pais" id="pais" value="España" readonly>
+            </p>
+            <p>
+                <label for="ca">Comunidad Autónoma: </label>
+                <input type="text" name="ca" id="ca" value="Castilla la Mancha" disabled>
+            </p>
+            <p>
+                <label for="contra">Contraseña: </label>
+                <input type="password" name="contra" id="contra" maxlength="10" minlength="4" required>
+            </p>
+            <p>
+                <label for="hombre">Hombre: </label>
+                <input type="radio" name="genero" id="hombre" checked>
+                <label for="mujer">Mujer: </label>
+                <input type="radio" name="genero" id="mujer">
+            </p>
+            <p>
+                <label for="fuma">Fumador: </label>
+                <input type="checkbox" name="fuma" id="fuma">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Otros datos</legend>
+            <p>
+                <label for="prov">Provincia</label>
+                <select name="prov" id="prov">
+                    <option value="cr">Ciudad Real</option>
+                    <option value="ab">Albacete</option>
+                    <option value="gu">Guadalajara</option>
+                    <option value="cu">Cuenca</option>
+                    <option value="to">Toledo</option>
+                </select>
+            </p>
+            <p>
+                <label for="obs">Observaciones: </label>
+                <textarea name="obs" id="obs" cols="10" rows="6">
+                    Escriba Algo...
+
+                </textarea>
+            </p>
+            <p>
+                <label for="color">Color: </label>
+                <input type="color" name="color" id="color">
+            </p>
+            <p>
+                <label for="fechanac">Fecha de Nacimiento: </label>
+                <input type="date" name="fechanac" id="fechanac">
+            </p>
+            <p>
+                <label for="edad">Edad: </label>
+                <input type="number" name="edad" id="edad" min="0" max="100">
+            </p>
+            <p>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email">
+            </p>
+            <p>
+                <label for="fichero">Adjuntar foto: </label>
+                <input type="file" name="fichero" id="fichero">
+            </p>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reinciar Formulario">
+    </form>
+</body>
+</html>
